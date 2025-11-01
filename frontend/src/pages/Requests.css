@@ -1,0 +1,19 @@
+.requests-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.requests-column {
+  min-width: 300px;
+}
+
+.requests-column-full {
+  grid-column: 1 / -1;
+}
+
+.requests-column h2,
+.requests-column-full h2 {
+  border-bottom: 2px solid var(--grey-light);
+  padding-bottom: 0.5rem;
+}

@@ -1,0 +1,151 @@
+.terminal-window {
+  background-color: #1e1e1e;
+  color: #00cc00;
+  font-family: 'Consolas', 'Courier New', monospace;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-lg);
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #333;
+}
+
+.terminal-header {
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border-bottom: 1px solid #111;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+}
+
+.terminal-tab {
+  background-color: #444;
+  color: #ccc;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin-top: 0.3rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+}
+
+.terminal-tab.active {
+  background-color: #1e1e1e;
+  color: #00cc00;
+  border-bottom: 1px solid #1e1e1e;
+}
+
+.terminal-controls {
+  margin-left: auto;
+  display: flex;
+  gap: 0.75rem;
+  padding-right: 0.5rem;
+  color: #999;
+}
+.control-close:hover {
+  color: #ef4444;
+}
+
+.terminal-body {
+  padding: 1rem;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* Scrollbar styling */
+.terminal-body::-webkit-scrollbar {
+  width: 10px;
+}
+.terminal-body::-webkit-scrollbar-track {
+  background: #333;
+}
+.terminal-body::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+.terminal-body::-webkit-scrollbar-thumb:hover {
+  background: #777;
+}
+
+.terminal-output p {
+  margin: 0.25rem 0;
+  color: #f0f0f0;
+}
+.terminal-output pre {
+  color: #f0f0f0;
+  font-family: inherit;
+  font-size: 1rem;
+  white-space: pre-wrap;
+  border: 1px dashed #444;
+  padding: 1rem;
+  background-color: #222;
+}
+.terminal-output strong {
+  color: #00cc00;
+}
+
+/* Chat Styles */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.chat-messages {
+  flex-grow: 1;
+  overflow-y: auto;
+  color: #f0f0f0;
+}
+.chat-user {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.user-admin {
+  color: #00cc00;
+}
+.user-sys_admin {
+  color: #ec4899;
+}
+.user-system {
+  color: #f59e0b;
+}
+
+.chat-form {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #333;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+.prompt {
+  color: #00cc00;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+.chat-input {
+  background: transparent;
+  border: none;
+  color: #f0f0f0;
+  font-family: inherit;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+.chat-input:focus {
+  outline: none;
+}
+
+.typing-indicator {
+  color: #999;
+  font-style: italic;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}

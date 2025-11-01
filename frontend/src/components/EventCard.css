@@ -1,0 +1,74 @@
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-left: 6px solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.event-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.event-status-busy {
+  border-left-color: var(--primary-color);
+}
+.event-status-swappable {
+  border-left-color: var(--warning-color);
+}
+.event-status-swap_pending {
+  border-left-color: var(--grey-mid);
+}
+
+.event-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--text-primary);
+}
+.event-info p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.event-status-and-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.event-status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.event-status-busy .event-status-badge {
+  background-color: var(--primary-light);
+  color: white;
+}
+.event-status-swappable .event-status-badge {
+  background-color: var(--warning-color);
+  color: white;
+}
+.event-status-swap_pending .event-status-badge {
+  background-color: var(--grey-mid);
+  color: var(--text-primary);
+}
+
+.event-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.event-actions .btn,
+.event-actions .btn-secondary {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}

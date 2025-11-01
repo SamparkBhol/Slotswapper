@@ -1,0 +1,73 @@
+.swap-card {
+  border-left: 6px solid var(--primary-color);
+}
+.swap-incoming { border-left-color: var(--success-color); }
+.swap-outgoing { border-left-color: var(--warning-color); }
+.swap-history { border-left-color: var(--grey-mid); }
+.swap-status-accepted { border-left-color: var(--success-color); }
+.swap-status-rejected { border-left-color: var(--danger-color); }
+
+.swap-card p {
+  margin: 0.5rem 0;
+}
+.swap-arrow {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0.25rem 0 !important;
+}
+
+.swap-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+.swap-card-header img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.swap-card-header p {
+  margin: 0;
+}
+
+.slot-info {
+  background: var(--grey-lightest);
+  border: 1px solid var(--grey-light);
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+}
+.slot-info.offered { border-left: 4px solid var(--warning-color); }
+.slot-info.requested { border-left: 4px solid var(--success-color); }
+
+.slot-info strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+.slot-info p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.swap-actions {
+  margin-top: 1.25rem;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.swap-status {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+.status-pending { color: var(--warning-color); }
+.status-accepted { color: var(--success-color); }
+.status-rejected { color: var(--danger-color); }

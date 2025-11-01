@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # MongoDB Database Service
+  database:
+    image: mongo
+    container_name: slot-swapper-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  # Backend API Service
+  backend:
+    build: ./backend
+    container_name: slot-swapper-backend
+    ports:
+      - "5000:5000"
+    environment:
+      # Use the docker-compose service name for the database
+      DATABASE_URL: "mongodb://database:27017/slotswapper" 
+      JWT_SECRET: "26e243fced8a63eead3e3fd99bad455618d3e93479f4c2780e8c0df184ff6c0ebd0236b3f4580c35a871cad4e1ecbc88d0fadb8172662be881c4606d74a89663b4f52828"
+    depends_on:
+      - database # Wait for the database to be ready
+    volumes:
+      - ./backend:/app # Mount local code for live reload (dev)
+      - /app/node_modules # Don't overwrite node_modules
+    
+  # Frontend UI Service
+  frontend:
+    build: ./frontend
+    container_name: slot-swapper-frontend
+    ports:
+      - "8080:80" # We'll access the app on http://localhost:8080
+    depends_on:
+      - backend # Wait for the backend to be ready
+    
+volumes:
+  mongo-data:
