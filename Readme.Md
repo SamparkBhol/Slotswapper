@@ -1,6 +1,6 @@
-# 🚀 SlotSwapper
+# SlotSwapper
 
-SlotSwapper is a peer-to-peer time-slot scheduling application. Users can mark busy slots on their calendar as "swappable," allowing other users to browse and request to swap for one of their own swappable slots.
+SlotSwapper is a peer to peer time-slot scheduling application. Users can mark busy slots on their calendar as "swappable," allowing other users to browse and request to swap for one of their own swappable slots.
 
 This project was built as a full-stack technical challenge, demonstrating data modeling, complex API logic, and frontend state management.
 
@@ -13,7 +13,7 @@ This project was built as a full-stack technical challenge, demonstrating data m
 
 ---
 
-## ⭐️ Stand-Out Features
+## Stand Out Features
 
 * **Real-time Notifications:** Users are notified instantly of new swap requests and responses using WebSockets.
 * **"Smart" Swap Logic:** The app prevents users from offering a swap that conflicts with the other user's schedule.
@@ -22,7 +22,7 @@ This project was built as a full-stack technical challenge, demonstrating data m
 
 ---
 
-## 🚀 How to Run (Recommended: Docker)
+## How to Run (Recommended: Docker)
 
 This is the easiest way to run the entire project (frontend, backend, and database).
 
@@ -47,7 +47,7 @@ To stop the services, run: `docker-compose down`
 
 ---
 
-## 🛠️ How to Run Tests (Backend)
+## How to Run Tests (Backend)
 
 1.  Navigate to the backend folder:
     ```bash
