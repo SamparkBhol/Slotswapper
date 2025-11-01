@@ -21,6 +21,11 @@ This project was built as a full-stack technical challenge, demonstrating data m
 * **Polished UI:** Features user avatars, a clean two-column dashboard, and a toast notification system.
 
 ---
+## Video showcase of the project
+
+https://www.loom.com/share/27ad7a3a70f44163be3ab0917da5572c
+
+---
 
 ## How to Run (Recommended: Docker)
 
